@@ -15,7 +15,7 @@ chmod +x ./kubeadm_pull.sh
 cat >kubeadm.yaml <<EOF
 apiVersion: kubeadm.k8s.io/v1beta2
 kind: ClusterConfiguration
-kubernetesVersion: v1.17.2
+kubernetesVersion: $1
 controlPlaneEndpoint: "192.168.3.200:6443"
 networking:
   serviceSubnet: "10.96.0.0/16"
